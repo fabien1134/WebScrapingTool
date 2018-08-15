@@ -4,7 +4,7 @@
   "MonikerUriMapping": [
     {
       "MonikerName": "hackernews",
-      "Uri": "https://news.ycombinator.com/news?p=1",
+      "Uri": "https://news.ycombinator.com/",
       "ScraperType": "HackerNewsScraper"
     },
     {

@@ -32,10 +32,17 @@ MonikerUriMapping item:
 JSON.NET - Newtonsoft.Json library was used to interact and manipulate json.
 The main reason is it provides a number of ways to serialize and deserialize json.
 It provides a number of data structures with different interfaces that allows simplified json manipulation in effect reducing code
-
+If the dll is required the nuget package manager command is:
+Install-Package Newtonsoft.Json -Version 11.0.2
+--
+HtmlAgilityPack has been used to parse html as there .Net XML parsers had issues parsing the sites html due to invalid characters
+To install open the nuget package manager console
+input the following command: Install-Package HtmlAgilityPack -Version 1.8.6
 
 -Additional Notes
 ---------------------------
+--Due to time constraints the code quality of the HackerNewsScraper is reduced, I will optomise class using recursive functions
+-Due to time constraints the unit tests for the HackerNewsScraper have not been implemented
 --Did not include tracesourcing to log the stack during errors due to time constraints
 --Assuming all trailing arguments will have a '--' Identifier
 --Assumes a value will only appear after a trailing arguement
