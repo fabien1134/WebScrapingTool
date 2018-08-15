@@ -9,12 +9,12 @@
     },
     {
       "MonikerName": "hackernewsP2",
-      "Uri": "https://news.ycombinator.com/news?p=2",
+      "Uri": "https://news.ycombinator.com/",
       "ScraperType": "GoogleScraper"
     },
     {
       "MonikerName": "hackernewsP3",
-      "Uri": "https://news.ycombinator.com/news?p=3",
+      "Uri": "https://news.ycombinator.com/",
       "ScraperType": "FacebookScraper"
     }
   ]
