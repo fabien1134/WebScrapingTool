@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using WebScrapingTool.Entities;
+using WebScrapingTool.Interfaces;
 using WebScrapingTool.Properties;
 using static WebScrapingTool.Constants.Constants;
 
@@ -77,31 +78,20 @@ namespace WebScrapingTool
                                if (!monikerUriMapping.Keys.Contains(userInputProcessor.MonikerArgument))
                                    throw new Exception("Moniker Not Found In The Config Files Moniker Uri Mapping Property");
 
+                               //ToDo - only continue main process loop once the trailing arguments has been stored locally before userInputProcessor state reset
+                               Dictionary<string, string> trailingArguments = userInputProcessor.TrailingArguments;
+
+
                                //Collect its associated uri to provide the webscraper
                                string uri = monikerUriMapping[userInputProcessor.MonikerArgument].Uri;
 
-                               //Select the associated scraper type that should be used with the valid maniker argument
+                               //Select the associated scraper type that should be used with the valid moniker argument
                                switch (monikerUriMapping[userInputProcessor.MonikerArgument].ScraperType)
                                {
                                    case ScraperType.HackerNewsScraper:
                                        //Initialize algorithm based on selected mapping item 
-                                       try
-                                       {
-                                           //Request body
-                                           string responseBody = default;
-                                           using (HttpResponseMessage responseMessage = await httpClient.GetAsync(uri))
-                                           using (HttpContent content = responseMessage.Content)
-                                           {
-                                               responseBody = await content.ReadAsStringAsync();
-                                           }
-
-                                           Console.WriteLine(responseBody);
-                                       }
-                                       catch (Exception ex)
-                                       {
-                                           //Display error information based on web scrapping execution errors
-                                           //Log Error Message
-                                       }
+                                       IWebScraper webScraper = ScraperFactory.CreateWebScraperInstance(ScraperType.HackerNewsScraper);
+                                       await webScraper.ExecuteScraping(uri, httpClient, trailingArguments);
                                        break;
                                    default://Will throw an exception if the associated web scraper is unidentified
                                        throw new Exception("Provided Web Scraper Is Unidentified");

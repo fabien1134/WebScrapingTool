@@ -47,10 +47,14 @@
   <ItemGroup>
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Entities\ConfigManipulator.cs" />
+    <Compile Include="Entities\HackerNewsPost.cs" />
+    <Compile Include="Entities\HackerNewsScraper.cs" />
+    <Compile Include="Entities\ScraperFactory.cs" />
     <Compile Include="Entities\UserInputProcessor.cs" />
     <Compile Include="Handlers\EmbeddedResourceHandler.cs" />
     <Compile Include="Handlers\JsonHandler.cs" />
-    <Compile Include="Interfaces\Scraper.cs" />
+    <Compile Include="Interfaces\IScraperFactory.cs" />
+    <Compile Include="Interfaces\IWebScraper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AppSettings.Designer.cs">
       <AutoGen>True</AutoGen>
