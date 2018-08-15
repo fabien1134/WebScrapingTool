@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebScrapingTool.Properties" GeneratedClassName="AppSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConfigFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Resources\Config.json</Value>
+    </Setting>
+    <Setting Name="ValidCommandsResourceFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ValidTrailingCommands.json</Value>
+    </Setting>
+    <Setting Name="ResourceManifestPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.Resources.</Value>
+    </Setting>
+    <Setting Name="ApplicationName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WebScrapingTool</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

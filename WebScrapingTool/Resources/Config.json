@@ -1,10 +1,21 @@
 ﻿{
-  "Mappings": [
+  "ConsoleRemainOpen": true,
+  "InteractionMode": true,
+  "MonikerUriMapping": [
     {
-
+      "MonikerName": "hackernews",
+      "Uri": "https://news.ycombinator.com/news?p=1",
+      "ScraperType": "HackerNewsScraper"
     },
     {
-
+      "MonikerName": "hackernewsP2",
+      "Uri": "https://news.ycombinator.com/news?p=2",
+      "ScraperType": "GoogleScraper"
+    },
+    {
+      "MonikerName": "hackernewsP3",
+      "Uri": "https://news.ycombinator.com/news?p=3",
+      "ScraperType": "FacebookScraper"
     }
   ]
 }
