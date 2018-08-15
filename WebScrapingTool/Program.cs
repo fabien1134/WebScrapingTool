@@ -59,7 +59,7 @@ namespace WebScrapingTool
 
                         //Validate and process input
                         userInputProcessor.ProcessInput(input);
-                        //ToDo-- trigger cancelation token if it is able to be canceled to signal tasks instances they should stop
+                        //ToDo-- trigger cancellation token if it is able to be canceled to signal tasks instances they should stop
                         //Break out of the loop if the exit command has been input
                         if (userInputProcessor.Exit)
                             break;
